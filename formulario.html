@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário - IA Nutricionista</title>
-    <link rel="stylesheet" href="css.css">
+    <title>Formulário - Nutri Bot</title>
+    <link rel="stylesheet" href="css_form.css">
 </head>
 <body>
     <header class="navbar">
         <div class="container">
-            <div class="logo">IA Nutricionista</div>
+            <div class="logo">Nutri Bot</div>
             <nav>
                 <ul>
                     <li><a href="index.html">Início</a></li>
                 </ul>
-            </nav>
+            </nav>            
         </div>
     </header>
 
@@ -23,43 +23,63 @@
             <h1>Preencha seu Perfil Nutricional</h1>
             <p>Responda às perguntas para que a IA possa criar a dieta ideal para você.</p>
 
-            <form action="#" method="POST">
-                <label for="nome">Nome Completo:</label>
-                <input type="text" id="nome" name="nome" required>
+            <form id="nutriForm" action="#" method="POST">
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                </div>
 
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@email.com" required>
+                </div>
 
-                <label for="idade">Idade:</label>
-                <input type="number" id="idade" name="idade" required>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="idade">Idade:</label>
+                        <input type="number" id="idade" name="idade" min="12" max="100" required>
+                    </div>
 
-                <label for="peso">Peso (kg):</label>
-                <input type="number" id="peso" name="peso" step="0.1" required>
+                    <div class="form-group">
+                        <label for="peso">Peso (kg):</label>
+                        <input type="number" id="peso" name="peso" step="0.1" min="30" max="300" required>
+                    </div>
 
-                <label for="altura">Altura (cm):</label>
-                <input type="number" id="altura" name="altura" required>
+                    <div class="form-group">
+                        <label for="altura">Altura (cm):</label>
+                        <input type="number" id="altura" name="altura" min="100" max="230" required>
+                    </div>
+                </div>
 
-                <label for="objetivo">Qual é o seu objetivo principal?</label>
-                <select id="objetivo" name="objetivo">
-                    <option value="perder_peso">Perder Peso</option>
-                    <option value="ganhar_massa">Ganhar Massa Muscular</option>
-                    <option value="manter_peso">Manter Peso</option>
-                    <option value="melhorar_saude">Melhorar Saúde Geral</option>
-                </select>
+                <div class="form-group">
+                    <label for="objetivo">Qual é o seu objetivo principal?</label>
+                    <select id="objetivo" name="objetivo">
+                        <option value="perder_peso">Perder Peso</option>
+                        <option value="ganhar_massa">Ganhar Massa Muscular</option>
+                        <option value="manter_peso">Manter Peso</option>
+                        <option value="melhorar_saude">Melhorar Saúde Geral</option>
+                    </select>
+                </div>
 
-                <label for="restricao">Possui alguma restrição alimentar?</label>
-                <input type="text" id="restricao" name="restricao" placeholder="Ex: lactose, glúten, vegano, etc.">
+                <div class="form-group">
+                    <label for="restricao">Possui alguma restrição alimentar?</label>
+                    <input type="text" id="restricao" name="restricao" placeholder="Ex: lactose, glúten, vegano">
+                </div>
 
-                <label for="atividade">Qual é seu nível de atividade física?</label>
-                <select id="atividade" name="atividade">
-                    <option value="sedentario">Sedentário</option>
-                    <option value="leve">Leve (1-2 vezes por semana)</option>
-                    <option value="moderado">Moderado (3-4 vezes por semana)</option>
-                    <option value="intenso">Intenso (5+ vezes por semana)</option>
-                </select>
+                <div class="form-group">
+                    <label for="atividade">Qual é seu nível de atividade física?</label>
+                    <select id="atividade" name="atividade">
+                        <option value="sedentario">Sedentário</option>
+                        <option value="leve">Leve (1-2 vezes por semana)</option>
+                        <option value="moderado">Moderado (3-4 vezes por semana)</option>
+                        <option value="intenso">Intenso (5+ vezes por semana)</option>
+                    </select>
+                </div>
 
-                <label for="observacoes">Observações adicionais:</label>
-                <textarea id="observacoes" name="observacoes" rows="4" placeholder="Descreva qualquer detalhe extra que ache importante"></textarea>
+                <div class="form-group">
+                    <label for="observacoes">Observações adicionais:</label>
+                    <textarea id="observacoes" name="observacoes" rows="4" placeholder="Descreva qualquer detalhe extra"></textarea>
+                </div>
 
                 <button type="submit" class="form-button">Enviar Respostas</button>
             </form>
@@ -68,7 +88,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 IA Nutricionista - Todos os direitos reservados</p>
+            <p>&copy; 2025 Nutri Bot - Todos os direitos reservados</p>
         </div>
     </footer>
 
