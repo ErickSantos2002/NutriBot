@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Preencha seu perfil nutricional para receber uma dieta personalizada criada pela Nutri Bot.">
     <title>Formulário - Nutri Bot</title>
     <link rel="stylesheet" href="css_form.css">
 </head>
+<!-- Open Graph -->
+<meta property="og:title" content="Nutri Bot - Sua dieta ideal com inteligência artificial">
+<meta property="og:description" content="Descubra como a IA Nutri Bot pode criar uma dieta personalizada baseada no seu perfil nutricional. Comece agora!">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seudominio.com"> <!-- Substitua pelo seu domínio -->
+<meta property="og:image" content="https://seudominio.com/imagem.jpg"> <!-- Substitua pela URL da imagem de destaque -->
 <body>
     <header class="navbar">
         <div class="container">
-            <div class="logo">Nutri Bot</div>
+            <div class="logo">
+                <img src="assets/logo.png" alt="Logo Nutri Bot" height="40">
+              </div>              
             <nav>
                 <ul>
                     <li><a href="index.html">Início</a></li>
@@ -20,40 +29,42 @@
 
     <section class="form-section">
         <div class="container">
-            <h1>Preencha seu Perfil Nutricional</h1>
+            <img src="assets/form-banner.png" alt="Banner de dieta personalizada" style="max-width: 300px; margin-bottom: 20px;">
+            <h1>Crie sua dieta personalizada</h1>
+            <h2>Preencha seu perfil nutricional</h2>
             <p>Responda às perguntas para que a IA possa criar a dieta ideal para você.</p>
 
             <form id="nutriForm" action="#" method="POST">
                 <div class="form-group">
                     <label for="nome">Nome Completo:</label>
-                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required aria-label="Nome Completo">
                 </div>
 
                 <div class="form-group">
                     <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" placeholder="seuemail@email.com" required>
+                    <input type="email" id="email" name="email" placeholder="seuemail@email.com" required aria-label="E-mail">
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
                         <label for="idade">Idade:</label>
-                        <input type="number" id="idade" name="idade" min="12" max="100" required>
+                        <input type="number" id="idade" name="idade" min="12" max="100" required aria-label="Idade">
                     </div>
 
                     <div class="form-group">
                         <label for="peso">Peso (kg):</label>
-                        <input type="number" id="peso" name="peso" step="0.1" min="30" max="300" required>
+                        <input type="number" id="peso" name="peso" step="0.1" min="30" max="300" required aria-label="Peso">
                     </div>
 
                     <div class="form-group">
                         <label for="altura">Altura (cm):</label>
-                        <input type="number" id="altura" name="altura" min="100" max="230" required>
+                        <input type="number" id="altura" name="altura" min="100" max="230" required aria-label="Altura">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="objetivo">Qual é o seu objetivo principal?</label>
-                    <select id="objetivo" name="objetivo">
+                    <select id="objetivo" name="objetivo" aria-label="Objetivo principal">
                         <option value="perder_peso">Perder Peso</option>
                         <option value="ganhar_massa">Ganhar Massa Muscular</option>
                         <option value="manter_peso">Manter Peso</option>
@@ -67,7 +78,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="atividade">Qual é seu nível de atividade física?</label>
+                    <select id="atividade" name="atividade" aria-label="Nível de atividade física">
                     <select id="atividade" name="atividade">
                         <option value="sedentario">Sedentário</option>
                         <option value="leve">Leve (1-2 vezes por semana)</option>

@@ -11,6 +11,26 @@ body {
     color: #333;
 }
 
+.logo img {
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Ajuste nos títulos principais */
+h1 {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: #2E7D32;
+}
+
+/* Ajuste nos subtítulos */
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+}
+
 /* Navbar fixa */
 .navbar {
     position: fixed;
@@ -90,32 +110,59 @@ body {
     align-items: center;
 }
 
-/* Ajuste no container dentro do Hero */
+/* Hero - Ajustando melhor o layout */
 .hero .container {
-    max-width: 900px;
-    width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
 }
 
-/* Ajuste no título e descrição */
-.hero h1 {
-    font-size: 3em;
+/* Hero Content - Alinhamento e espaçamentos */
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Garante melhor adaptação em telas menores */
+    width: 100%;
+}
+
+/* Hero Text - Melhorando tamanho e alinhamento */
+.hero-text {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+    padding-right: 40px;
+}
+
+/* Ajuste no Título */
+.hero-text h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #ffffff;
     margin-bottom: 15px;
 }
 
-.hero p {
-    font-size: 1.3em;
-    margin-bottom: 30px;
+/* Ajuste na descrição */
+.hero-text p {
+    font-size: 1.4em;
+    line-height: 1.5;
+    color: #f1f1f1;
+    margin-bottom: 25px;
 }
 
-/* Botão Hero */
+/* Ajuste no botão */
 .hero-button {
     background-color: #FFD700;
     color: #333;
-    padding: 15px 30px;
-    border: none;
-    font-size: 1.1em;
+    padding: 18px 30px;
+    font-size: 1.2em;
     font-weight: bold;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
@@ -123,7 +170,52 @@ body {
 
 .hero-button:hover {
     background-color: #FFC107;
-    transform: scale(1.05);
+    transform: scale(1.08);
+}
+
+/* Hero Image - Ajuste para evitar desalinhamento */
+.hero-image {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 90%;
+    height: auto;
+}
+
+/* Responsividade: ajustando para telas menores */
+@media (max-width: 900px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-text p {
+        font-size: 1.2em;
+    }
+
+    .hero-button {
+        padding: 15px 25px;
+        font-size: 1.1em;
+    }
+
+    .hero-image {
+        max-width: 80%;
+    }
 }
 
 /* Seções */
