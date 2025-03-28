@@ -1,320 +1,244 @@
-/* Configuração global */
+/* Importando fonte Bai Jamjuree */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600;700&display=swap');
+
+:root {
+  --verde-escuro: #008282;
+  --verde-intermediario: #018484;
+  --verde-claro: #0BBBBC;
+  --cinza-escuro: #434343;
+  --branco: #FFFFFF;
+}
+
+/* Reset e base */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Bai Jamjuree', sans-serif;
 }
 
 body {
-    background-color: #f9f9f9;
-    color: #333;
+  background-color: var(--branco);
+  color: var(--cinza-escuro);
+  line-height: 1.6;
 }
 
-.logo img {
-    height: 40px;
-    object-fit: contain;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* Ajuste nos títulos principais */
-h1 {
-    font-size: 2.8em;
-    font-weight: bold;
-    color: #2E7D32;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Ajuste nos subtítulos */
-h2 {
-    font-size: 2em;
-    font-weight: bold;
-    color: #333;
-    margin-top: 20px;
-}
-
-/* Navbar fixa */
+/* Navbar */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    z-index: 1000;
-}
-
-.navbar .container {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: space-between;
+  background-color: var(--branco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
 }
 
 .navbar .logo {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #2E7D32;
+  height: 50px;
 }
 
 .navbar nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
+  list-style: none;
+  display: flex;
+  gap: 30px;
 }
 
 .navbar nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1.1em;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-    padding: 10px 15px;
+  text-decoration: none;
+  color: var(--cinza-escuro);
+  font-weight: 600;
+  transition: 0.3s;
 }
 
 .navbar nav ul li a:hover {
-    color: #2E7D32;
+  color: var(--verde-claro);
 }
 
-/* Botão CTA da Navbar */
-.cta-button {
-    background-color: #FFD700;
-    color: #333;
-    padding: 12px 25px;
-    border: none;
-    font-size: 1em;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-}
-
-.cta-button:hover {
-    background-color: #FFC107;
-    transform: scale(1.05);
-}
-
-/* Seção Hero ocupando toda a tela */
+/* Hero Section */
 .hero {
-    background: linear-gradient(90deg, #4CAF50, #2E7D32);
-    color: white;
-    text-align: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--branco);
+  text-align: left;
+  padding-top: 100px;
 }
 
-/* Hero - Ajustando melhor o layout */
-.hero .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    max-width: 1200px;
-    width: 90%;
-    margin: 0 auto;
-}
-
-/* Hero Content - Alinhamento e espaçamentos */
 .hero-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Garante melhor adaptação em telas menores */
-    width: 100%;
-}
-
-/* Hero Text - Melhorando tamanho e alinhamento */
-.hero-text {
-    flex: 1;
-    max-width: 50%;
-    text-align: left;
-    padding-right: 40px;
-}
-
-/* Ajuste no Título */
-.hero-text h1 {
-    font-size: 3.5em;
-    font-weight: bold;
-    line-height: 1.2;
-    color: #ffffff;
-    margin-bottom: 15px;
-}
-
-/* Ajuste na descrição */
-.hero-text p {
-    font-size: 1.4em;
-    line-height: 1.5;
-    color: #f1f1f1;
-    margin-bottom: 25px;
-}
-
-/* Ajuste no botão */
-.hero-button {
-    background-color: #FFD700;
-    color: #333;
-    padding: 18px 30px;
-    font-size: 1.2em;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.hero-button:hover {
-    background-color: #FFC107;
-    transform: scale(1.08);
-}
-
-/* Hero Image - Ajuste para evitar desalinhamento */
-.hero-image {
-    flex: 1;
-    max-width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-image img {
-    max-width: 90%;
-    height: auto;
-}
-
-/* Responsividade: ajustando para telas menores */
-@media (max-width: 900px) {
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-text {
-        max-width: 100%;
-        text-align: center;
-        padding-right: 0;
-    }
-
-    .hero-text h1 {
-        font-size: 2.5em;
-    }
-
-    .hero-text p {
-        font-size: 1.2em;
-    }
-
-    .hero-button {
-        padding: 15px 25px;
-        font-size: 1.1em;
-    }
-
-    .hero-image {
-        max-width: 80%;
-    }
-}
-
-/* Seções */
-.section {
-    background-color: #f9f9f9;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
-    padding: 50px 20px;
-}
-
-/* Título da seção */
-.section-title {
-    color: #2a7c4f;
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-/* Texto das seções */
-.section-text {
-    font-size: 18px;
-    color: #555;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
+    min-height: 100vh;
+    padding-top: 120px;
     text-align: center;
+  }
+  
+.hero-text {
+    max-width: 800px;
+  }
+
+.hero-text h1 {
+  font-size: 3.2em;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.4em;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  background-color: var(--verde-claro);
+  color: var(--branco);
+  padding: 15px 30px;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: var(--verde-intermediario);
+}
+
+/* App Section */
+.app-section {
+  background-color: var(--branco);
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.app-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.app-text h2 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+  color: var(--verde-escuro);
+}
+
+.btn-secondary {
+  background-color: var(--verde-escuro);
+  color: var(--branco);
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: var(--verde-intermediario);
+}
+
+.app-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Sobre */
+.sobre {
+  background-size: cover;
+  background-position: center;
+  color: var(--cinza-escuro);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.sobre h2 {
+  font-size: 2.4em;
+  margin-bottom: 20px;
+  color: var(--verde-escuro);
+}
+
+.sobre p {
+  font-size: 1.2em;
+  margin-bottom: 15px;
 }
 
 /* Benefícios */
-.benefits-list {
-    list-style: none;
-    padding: 0;
-    max-width: 600px;
-    margin: 0 auto;
+.beneficios {
+  background-color: #f5f5f5;
+  padding: 100px 20px;
+  text-align: center;
 }
 
-/* Estilização dos itens da lista */
-.benefit-item {
-    font-size: 18px;
-    color: #333;
-    background: #fff;
-    padding: 12px 20px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+.beneficios h2 {
+  font-size: 2.4em;
+  color: var(--verde-escuro);
+  margin-bottom: 40px;
 }
 
-/* Adiciona espaçamento entre o emoji e o texto */
-.benefit-item::before {
-    content: "✔️";
-    margin-right: 10px;
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-/* Depoimentos */
-.testimonials {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+.benefit-card {
+  background-color: var(--branco);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-/* Card do depoimento */
-.testimonial {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 500px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    position: relative;
+.benefit-card img {
+  width: 32px;
+  height: 32px;
 }
 
-/* Texto do depoimento */
-.testimonial-text {
-    font-size: 18px;
-    color: #444;
-    font-style: italic;
-    margin-bottom: 10px;
+.benefit-card p {
+  font-size: 1.1em;
+  font-weight: 600;
+  text-align: left;
 }
 
-/* Nome do autor */
-.testimonial-author {
-    font-size: 16px;
-    color: #666;
-    font-weight: bold;
-}
-
-/* Rodapé */
+/* Footer */
 .footer {
-    background: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 5px;
-    height: 150px;
+  background-color: var(--cinza-escuro);
+  color: var(--branco);
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 0.9em;
 }

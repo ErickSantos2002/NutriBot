@@ -1,99 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A IA Nutri Bot cria dietas personalizadas com base no seu perfil. Comece agora sua jornada saudável!">
-    <title>Nutri Bot</title>
-    <link rel="stylesheet" href="css_landpage.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A IA Nutri Bot cria dietas personalizadas com base no seu perfil. Comece agora sua jornada saudável!" />
+  <title>Nutri Bot</title>
+  <link rel="stylesheet" href="css_landpage.css" />
 </head>
-<!-- Open Graph -->
-<meta property="og:title" content="Nutri Bot - Sua dieta ideal com inteligência artificial">
-<meta property="og:description" content="Descubra como a IA Nutri Bot pode criar uma dieta personalizada baseada no seu perfil nutricional. Comece agora!">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://seudominio.com"> <!-- Substitua pelo seu domínio -->
-<meta property="og:image" content="https://seudominio.com/imagem.jpg"> <!-- Substitua pela URL da imagem de destaque -->
 <body>
-    <header class="navbar">
-        <div class="container">
-            <div class="logo">
-                <img src="assets/logo.png" alt="Logo Nutri Bot" height="40">
-              </div>              
-            <nav>
-                <ul>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#beneficios">Benefícios</a></li>
-                    <li><a href="#depoimentos">Depoimentos</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-            <button class="cta-button" onclick="redirecionarParaFormulario()">Comece agora</button>
-        </div>
-    </header>
-    
-    <section class="hero full-height">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Alcance sua dieta ideal com nossa Nutri Bot</h1>
-                    <p>Uma ferramenta inteligente para criar dietas personalizadas de forma simples e eficaz.</p>
-                    <button class="hero-button" onclick="redirecionarParaFormulario()">Quero minha dieta personalizada</button>
-                </div>
-                <div class="hero-image">
-                    <img src="assets/hero-nutri.png" alt="Ilustração de pessoa saudável usando IA para dieta">
-                </div>
-            </div>
-        </div>
-    </section>    
-    
-    <section id="sobre" class="section full-height">
-        <div class="container">
-            <h2 class="section-title">O que é a <span>Nutri Bot?</span></h2>
-            <p class="section-text">
-                A <strong>Nutri Bot</strong> é uma inteligência artificial desenvolvida para criar planos alimentares personalizados de forma prática e eficiente. <br><br>
-                Com base nas suas preferências alimentares, objetivos de saúde e necessidades nutricionais, nossa IA elabora dietas sob medida para você. <br><br>
-                Seja para <strong>perder peso, ganhar massa muscular, melhorar sua saúde</strong> ou simplesmente ter uma alimentação mais equilibrada, a Nutri Bot utiliza tecnologia avançada para oferecer recomendações precisas e acessíveis. <br><br>
-                Nosso objetivo é <strong>facilitar sua jornada alimentar</strong>, garantindo que você tenha um plano saudável, gostoso e adequado à sua rotina. <br><br>
-                🚀🥗 <em>Experimente agora e descubra como a Nutri Bot pode transformar sua alimentação!</em>
-            </p>
-        </div>
-    </section>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <img src="Logo.png" alt="Logo Nutri Bot" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#beneficios">Benefícios</a></li>
+          <li><a href="#app">App</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section id="beneficios" class="section full-height">
-        <div class="container">
-            <h2 class="section-title">Benefícios da Nutri Bot</h2>
-            <ul class="benefits-list">
-                <li class="benefit-item">✅ Dietas 100% personalizadas</li>
-                <li class="benefit-item">📖 Baseado em ciência e nutrição</li>
-                <li class="benefit-item">⚡ Fácil de usar e acessível</li>
-                <li class="benefit-item">🎯 Resultados rápidos e eficazes</li>
-            </ul>
-        </div>
-    </section>    
+  <!-- Hero Section -->
+  <section class="hero" style="background-image: url('Fundo1.png');">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Alcance sua dieta ideal com nossa Nutri Bot</h1>
+        <p>Uma ferramenta inteligente para criar dietas personalizadas de forma simples e eficaz.</p>
+        <a href="#formulario" class="btn-primary">Quero minha dieta personalizada</a>
+      </div>
+    </div>
+  </section>
 
-    <section id="depoimentos" class="section full-height">
-        <div class="container">
-            <h2 class="section-title">O que nossos usuários dizem?</h2>
-            <div class="testimonials">
-                <div class="testimonial">
-                    <p class="testimonial-text">"A Nutri Bot revolucionou minha alimentação!"</p>
-                    <span class="testimonial-author">- Maria S.</span>
-                </div>
-                <div class="testimonial">
-                    <p class="testimonial-text">"Fácil, prático e com resultados reais."</p>
-                    <span class="testimonial-author">- João P.</span>
-                </div>
-            </div>
-        </div>
-    </section>    
+  <!-- App Section -->
+  <section id="app" class="section app-section">
+    <div class="container app-content">
+      <div class="app-text">
+        <h2>Acesse o nosso aplicativo</h2>
+        <p>Clique no botão ao lado e conheça o nosso app.</p>
+        <a href="#" class="btn-secondary">Ver App</a>
+      </div>
+      <div class="app-image">
+        <img src="Celular.png" alt="Mockup do App Nutri Bot" />
+      </div>
+    </div>
+  </section>
 
-    <footer id="contato" class="footer">
-        <div class="container">
-            <p>&copy; 2025 Nutri Bot - Todos os direitos reservados</p>
-            <p>Nos siga nas redes sociais</p>
+  <!-- Sobre Section -->
+  <section id="sobre" class="section sobre" style="background-image: url('Fundo2.png');">
+    <div class="container">
+      <h2>Sobre nós</h2>
+      <p>A Nutri Bot é uma inteligência artificial desenvolvida para criar planos alimentares personalizados. Com base nas suas preferências, objetivos e rotina, geramos dietas sob medida para você.</p>
+      <p>Seja para <strong>perder peso</strong>, <strong>ganhar massa</strong>, <strong>melhorar a saúde</strong> ou <strong>equilibrar sua alimentação</strong>, conte com recomendações de qualidade e acessíveis. ✨</p>
+    </div>
+  </section>
+
+  <!-- Benefícios Section -->
+  <section id="beneficios" class="section beneficios">
+    <div class="container">
+      <h2>Benefícios da Nutri Bot</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <img src="Icone Check.png" alt="Check" />
+          <p>Dietas 100% personalizadas</p>
         </div>
-    </footer>
-    
-    <script src="js.js"></script>
+        <div class="benefit-card">
+          <img src="Icone Check.png" alt="Check" />
+          <p>Baseado em ciência e nutrição</p>
+        </div>
+        <div class="benefit-card">
+          <img src="Icone Check.png" alt="Check" />
+          <p>Fácil de usar e acessível</p>
+        </div>
+        <div class="benefit-card">
+          <img src="Icone Check.png" alt="Check" />
+          <p>Acompanhamento inteligente 24h</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer id="contato" class="footer">
+    <div class="container">
+      <p>&copy; 2025 Nutri Bot - Todos os direitos reservados</p>
+      <p>CNPJ: 99.999.999/0001-99</p>
+    </div>
+  </footer>
 </body>
 </html>
