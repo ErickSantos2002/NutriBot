@@ -58,6 +58,7 @@ img {
 
 .navbar .logo {
   height: 40px;
+  margin-left: 20px;
 }
 
 .navbar nav ul {
@@ -101,6 +102,7 @@ img {
   background-color: var(--verde-claro);
   color: var(--branco);
   border: none;
+  align-self: flex-end;
 }
 
 .btn-primary:hover {
@@ -143,8 +145,9 @@ img {
 }
 
 .hero-text {
-  max-width: 700px;
   color: var(--branco);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .hero-text h1 {
@@ -162,72 +165,103 @@ img {
   background-size: cover;
   background-position: center;
   padding: 100px 20px;
-  text-align: center;
   color: var(--cinza-escuro);
 }
 
-.sobre-header {
+#sobre .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+#sobre .sobre-header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 15px;
   margin-bottom: 30px;
 }
 
-.sobre-logo {
+#sobre .sobre-logo {
   width: 40px;
   height: auto;
 }
 
-.sobre h2 {
+#sobre h2 {
   font-size: 2.4em;
   color: var(--verde-escuro);
 }
 
-.sobre p {
+#sobre p {
   font-size: 1.2em;
   margin-bottom: 15px;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  align-self: flex-end;
+}
+
+#sobre a {
+  align-self: flex-end;
 }
 
 /* App menor */
 .app-section {
   background-color: #018484;
   color: var(--branco);
-  padding: 40px 20px;
+  padding: 80px 20px 60px;
+  position: relative;
 }
 
 .app-content {
   display: flex;
-  position: relative;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
-  text-align: center;
+  text-align: left;
+  position: relative;
 }
 
-.app-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 10vw; /* ou ajuste conforme o tamanho desejado */
-  height: auto;
-}
-
-.app-text,
-.app-cta {
+.app-col {
   flex: 1;
   min-width: 250px;
+  padding: 10px;
 }
 
-.app-text h2,
+.app-text h2 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
 .app-text p {
   font-size: 1em;
 }
+
+.app-cta {
+  text-align: right;
+}
+
+.app-section .btn-secondary {
+  background-color: var(--branco);
+  color: var(--verde-escuro);
+  border: none;
+}
+
+.app-section .btn-secondary:hover {
+  background-color: var(--verde-claro);
+  color: var(--branco);
+}
+
+/* Imagem centralizada flutuando sobre o conteúdo */
+.app-image {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 170px;
+  height: auto;
+}
+
 
 /* Estratégia */
 .estrategia {
@@ -269,16 +303,6 @@ img {
   top: 3px;
 }
 
-/* Alinhamento hero e sobre */
-.alinhado-esquerda {
-  align-self: flex-start;
-}
-
-.alinhado-direita {
-  text-align: right;
-  align-self: flex-end;
-}
-
 /* Benefícios */
 .beneficios {
   background-color: #f2f2f2;
@@ -318,7 +342,6 @@ img {
   padding-left: 24px;
 }
 
-/* Checkmark com imagem */
 .beneficio-card ul li::before {
   content: "";
   position: absolute;
@@ -331,7 +354,6 @@ img {
   top: 3px;
 }
 
-/* Cards lado a lado */
 .beneficios .cards-wrapper {
   display: flex;
   flex-wrap: wrap;
