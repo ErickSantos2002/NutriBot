@@ -316,11 +316,11 @@ img {
 /* Imagem centralizada flutuando sobre o conteúdo */
 .app-image {
   position: absolute;
-  top: -80px;
+  top: -100px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  width: 170px;
+  width: 210px;
   height: auto;
 }
 
