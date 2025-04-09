@@ -78,17 +78,18 @@ img {
 /* Links do menu */
 .navbar nav ul li a {
   text-decoration: none;
-  background-color: var(--verde-claro);
-  color: var(--branco);
-  font-weight: 600;
+  background-color: transparent;
+  color: var(--verde-escuro);
+  font-weight: bold;
   padding: 8px 16px; /* Margem interna um pouco maior para melhor toque */
   border-radius: 6px;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar nav ul li a:hover {
-  background-color: var(--verde-intermediario);
-  transform: translateY(-2px);
+  background-color: #005c5c1c; /* Ou coloque uma cor de fundo leve se quiser destacar */
+  color: var(--verde-intermediario);
+  font-size: 1.05em; /* Aumenta o tamanho da fonte suavemente */
 }
 
 /* Botão de CTA na Navbar */
@@ -463,6 +464,16 @@ img {
 .beneficio-card .btn-primary {
   margin-top: 50px;
 }
+
+/* Linha */
+.linha-central {
+  width: 500px;           /* Define a largura da linha */
+  height: 1.5px;           /* Espessura da linha */
+  background-color: black;
+  margin: 40px auto;     /* Espaçamento acima e abaixo, e centraliza horizontalmente */
+  border-radius: 2px;    /* Opcional: cantos levemente arredondados */
+}
+
 
 /* Depoimentos */
 .depoimentos {
