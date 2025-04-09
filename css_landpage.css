@@ -2,11 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600;700&display=swap');
 
 :root {
-  --verde-escuro: #008282;
+  --verde-escuro: #005c5c;
   --verde-intermediario: #018484;
   --verde-claro: #0BBBBC;
   --cinza-escuro: #434343;
   --branco: #FFFFFF;
+  --preto: #000000;
 }
 
 * {
@@ -34,57 +35,77 @@ img {
   padding: 0 20px;
 }
 
-/* Navbar */
+/* Navbar Atualizada */
 .navbar {
-  background-color: var(--branco);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 1000;
+  /* Fundo semi-transparente com efeito de blur para um visual “glassmorphism” */
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px; /* Diminuindo um pouco a altura para um design mais enxuto */
+  transition: background 0.3s ease;
 }
 
-.navbar-content {
+/* Container interno da navbar */
+.navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
-  width: 100%;
 }
 
+/* Logo: ajuste de tamanho e pequena animação ao passar o mouse */
 .navbar .logo {
-  height: 40px;
-  margin-left: 20px;
+  height: 50px; /* Pode ser ajustado conforme o desejado */
+  transition: transform 0.3s ease;
 }
 
+.navbar .logo:hover {
+  transform: scale(1.1);
+}
+
+/* Menu de navegação */
 .navbar nav ul {
-  list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 20px; /* Espaçamento reduzido entre os itens */
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
+/* Links do menu */
 .navbar nav ul li a {
   text-decoration: none;
-  color: var(--branco);
   background-color: var(--verde-claro);
+  color: var(--branco);
   font-weight: 600;
-  padding: 8px 14px;
+  padding: 8px 16px; /* Margem interna um pouco maior para melhor toque */
   border-radius: 6px;
-  transition: 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar nav ul li a:hover {
   background-color: var(--verde-intermediario);
-  color: var(--branco);
+  transform: translateY(-2px);
 }
 
+/* Botão de CTA na Navbar */
 .navbar-btn {
   font-size: 0.9em;
-  padding: 10px 18px;
+  padding: 10px 20px; /* Ajustado para se destacar com tamanho proporcional */
+  background-color: var(--verde-escuro);
+  color: var(--branco);
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.navbar-btn:hover {
+  background-color: var(--verde-intermediario);
+  transform: translateY(-2px);
 }
 
 /* Botões */
@@ -99,7 +120,7 @@ img {
 }
 
 .btn-primary {
-  background-color: var(--verde-claro);
+  background-color: var(--verde-escuro);
   color: var(--branco);
   border: none;
   align-self: flex-end;
@@ -119,15 +140,72 @@ img {
   background-color: var(--verde-intermediario);
 }
 
-/* Hero Section */
+/* Seção Hero: conteúdo alinhado à esquerda, com largura limitada */
 .hero {
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
+  position: relative;
   display: flex;
   align-items: center;
-  padding-top: 80px;
+  justify-content: flex-start;
+  min-height: 100vh;
+  overflow: hidden;
   color: var(--branco);
+}
+
+/* Pseudo-elemento que carrega a imagem de fundo */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 40px; /* Ajuste esse valor para “empurrar” a imagem para baixo e mostrar mais do topo (experimente -30px, -50px, etc.) */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('assets/Fundo1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top; /* Garante que o topo da imagem seja priorizado */
+  z-index: -1; /* Coloca a imagem atrás do conteúdo */
+}
+
+/* Ajustes para os textos da seção Hero */
+.hero-text {
+  margin: 80px 0 0 0;
+  text-align: left;
+  max-width: 600px; /* Limita a largura do conteúdo – ajuste conforme o seu gosto */
+  color: var(--branco);
+}
+
+/* O container já aplica o padding de 20px, alinhando com a navbar */
+.hero .container {
+  width: 100%;
+  margin: 0 auto;
+  /* o padding: 0 20px; já vem na regra .container global */
+}
+
+.hero-text h1 {
+  font-size: 3.2em;
+  margin-bottom: 10px;  /* Reduzido para diminuir o espaço abaixo do título */
+  line-height: 1.1;     /* Tente valores entre 1.0 e 1.2 para reduzir o espaçamento */
+}
+
+.hero-text p {
+  font-size: 2.3em;
+  margin-bottom: 15px;  /* Reduzido para diminuir o espaço entre o parágrafo e os elementos abaixo */
+  line-height: 1.2;     /* Ajuste esse valor conforme o visual desejado */
+}
+
+.hero-text .btn-primary {
+  display: block;              /* Torna o botão um bloco inteiro */
+  width: 100%;                 /* Ocupa 100% da largura do container */
+  font-size: 2em;            /* Aumenta a fonte do texto dentro do botão */
+  line-height: 1.2;            /* Ajusta a altura de linha para 'apertar' ou expandir o texto */
+  padding: 16px 25px;          /* Aumenta o espaçamento vertical e horizontal */
+  text-align: center;            /* Alinha o texto à esquerda (ou 'center' se preferir) */
+  background-color: var(--verde-escuro);
+  color: var(--branco);
+  border: none;
+  margin-top: 15px;            /* Espaço acima do botão */
+  border-radius: 8px;          /* Bordas levemente arredondadas */
+  /* Se quiser destacar ainda mais o botão, pode adicionar sombra ou hover diferenciado */
 }
 
 .hero-content {
@@ -142,22 +220,6 @@ img {
   align-items: center;
   height: 100vh;
   padding-top: 80px; /* espaçamento para a navbar */
-}
-
-.hero-text {
-  color: var(--branco);
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.hero-text h1 {
-  font-size: 3.2em;
-  margin-bottom: 20px;
-}
-
-.hero-text p {
-  font-size: 1.4em;
-  margin-bottom: 30px;
 }
 
 /* Sobre */
@@ -184,7 +246,7 @@ img {
 }
 
 #sobre .sobre-logo {
-  width: 40px;
+  width: 70px;
   height: auto;
 }
 
@@ -208,7 +270,7 @@ img {
 .app-section {
   background-color: #018484;
   color: var(--branco);
-  padding: 80px 20px 60px;
+  padding: 50px 20px 30px;
   position: relative;
 }
 
@@ -300,42 +362,79 @@ img {
   background-image: url('assets/check_icon.png');
   background-size: contain;
   background-repeat: no-repeat;
-  top: 3px;
+  top: 8px;
 }
 
-/* Benefícios */
+/* Remova ou ajuste o pseudo-elemento atual em .beneficios */
 .beneficios {
-  background-color: #f2f2f2;
-  padding: 100px 20px;
-  text-align: center;
+  position: relative;
+  /* Remova o padding-bottom ou ajuste conforme necessário */
+  padding-top: 50px;
+  padding-bottom: 150px; /* Aumente a área para o gradiente */
 }
 
-.beneficios h2 {
-  font-size: 2.4em;
-  color: var(--verde-escuro);
-  margin-bottom: 40px;
+/* Container que envolve Benefícios e Depoimentos com gradiente contínuo */
+.gradient-wrapper {
+  background: linear-gradient(to bottom, #f2f2f2, var(--verde-claro));
 }
 
+/* Remova o fundo próprio dessas seções */
+.beneficios,
+.depoimentos {
+  background: transparent;
+}
+
+/* Se desejar ajustar o espaçamento geral, por exemplo: */
+.gradient-wrapper .container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* Atualização dos cartões de Benefícios para sombreamento mais intenso */
 .beneficio-card {
+  position: relative; /* Necessário para que fiquem acima do pseudo-elemento */
+  z-index: 1;
   background-color: var(--branco);
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  /* Sombra mais intensa e suave */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   margin-bottom: 40px;
   max-width: 500px;
   flex: 1 1 40%;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+}
+
+.beneficios h1 {
+  font-size: 2.4em;
+  color: var(--verde-escuro);
+  text-align: center;
+}
+
+.beneficios h2 {
+  font-size: 1.8em;
+  color: var(--verde-escuro);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.beneficio-card h3 {
+  font-size: 2.2em;
+  color: var(--verde-escuro);
+  margin-bottom: 10px;
 }
 
 .beneficio-card ul {
   list-style: none;
   padding: 0;
-  margin-bottom: 20px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .beneficio-card ul li {
-  font-size: 1.2em;
+  font-size: 1.4em;
   margin-bottom: 12px;
   text-align: left;
   position: relative;
@@ -351,7 +450,7 @@ img {
   background-image: url('assets/check_icon.png');
   background-size: contain;
   background-repeat: no-repeat;
-  top: 3px;
+  top: 8px;
 }
 
 .beneficios .cards-wrapper {
@@ -361,9 +460,12 @@ img {
   gap: 40px;
 }
 
+.beneficio-card .btn-primary {
+  margin-top: 50px;
+}
+
 /* Depoimentos */
 .depoimentos {
-  background-color: #ffffff;
   padding: 100px 20px;
   text-align: center;
 }
@@ -386,6 +488,10 @@ img {
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   text-align: left;
+}
+
+.depoimentos h2 {
+  font-size: 3em;
 }
 
 .depoimento img {
@@ -411,4 +517,39 @@ img {
   padding: 40px 20px;
   text-align: center;
   font-size: 0.9em;
+}
+
+/* Animações gerais */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variações específicas */
+.slide-left {
+  transform: translateX(-100px);
+}
+.slide-right {
+  transform: translateX(100px);
+}
+
+.visible.slide-left,
+.visible.slide-right {
+  transform: translateX(0);
+}
+
+/* Fade para imagem do app */
+.fade-up {
+  transform: translateY(80px);
+  opacity: 0;
+}
+.visible.fade-up {
+  transform: translateY(0);
+  opacity: 1;
 }

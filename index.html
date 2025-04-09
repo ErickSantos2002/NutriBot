@@ -6,24 +6,7 @@
   <meta name="description" content="A IA Nutri Bot cria dietas personalizadas com base no seu perfil. Comece agora sua jornada saudável!" />
   <title>Nutri Bot</title>
   <link rel="stylesheet" href="css_landpage.css" />
-  <style>
-    /* Correção para alinhar o conteúdo da section "sobre" à direita */
-    #sobre .container {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      text-align: right;
-    }
-
-    #sobre .sobre-header {
-      justify-content: flex-end;
-    }
-
-    #sobre p,
-    #sobre a {
-      align-self: flex-end;
-    }
-  </style>
+  
 </head>
 <body>
 
@@ -34,22 +17,22 @@
       <nav>
         <ul>
           <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#estrategia">Estratégia</a></li>
           <li><a href="#beneficios">Benefícios</a></li>
-          <li><a href="#app">App</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
-      <a href="#formulario" class="btn-primary navbar-btn">Quero minha dieta personalizada</a>
+      <a href="#" class="btn-primary navbar-btn redirecionar-formulario">Quero minha dieta personalizada</a>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero" style="background-image: url('assets/Fundo1.png');">
+  <section class="hero">
     <div class="container">
       <div class="hero-text">
         <h1>Alcance sua dieta ideal com nossa Nutri Bot</h1>
         <p>Uma ferramenta inteligente para criar dietas personalizadas de forma simples e eficaz.</p>
-        <a href="#formulario" class="btn-primary">Quero minha dieta personalizada</a>
+        <a href="#" class="btn-primary redirecionar-formulario">Quero minha dieta personalizada</a>
       </div>
     </div>
   </section>  
@@ -63,7 +46,7 @@
       </div>
       <p>A Nutri Bot é uma inteligência artificial desenvolvida para criar planos alimentares personalizados de forma prática e eficiente. Com base nas suas preferências alimentares, objetivos de saúde e necessidades nutricionais, nossa IA elabora dietas sob medida para você.</p>
       <p>Seja para <strong>perder peso</strong>, <strong>ganhar massa muscular</strong>, <strong>melhorar sua saúde</strong> ou <strong>ter uma alimentação mais equilibrada</strong>, a Nutri Bot usa tecnologia avançada para oferecer recomendações precisas e acessíveis.</p>
-      <a href="#formulario" class="btn-primary">Experimente agora</a>
+      <a href="#" class="btn-primary redirecionar-formulario">Experimente agora</a>
     </div>
   </section>
 
@@ -86,7 +69,7 @@
   </section>
 
   <!-- Estratégia Section -->
-  <section class="estrategia">
+  <section id="estrategia" class="estrategia">
     <div class="container">
       <h2>Estratégia para Nutrição Personalizada</h2>
       <ul class="etapas">
@@ -99,60 +82,65 @@
     </div>
   </section>
 
-  <!-- Benefícios Section -->
-  <section id="beneficios" class="section beneficios">
-    <div class="container">
-      <h2>Benefícios da Nutri Bot</h2>
-      <div class="cards-wrapper">
-        <div class="beneficio-card">
-          <ul>
-            <li>Seu Nutricionista Virtual 24h</li>
-            <li>Dietas 100% personalizadas</li>
-            <li>Baseado em ciência e nutrição</li>
-          </ul>
-          <a href="#formulario" class="btn-primary">Quero minha dieta personalizada</a>
-        </div>
-        <div class="beneficio-card">
-          <ul>
-            <li>Acompanhamento inteligente</li>
-            <li>Fácil de usar e acessível</li>
-            <li>Recomendações automatizadas</li>
-          </ul>
-          <a href="#formulario" class="btn-primary">Quero minha dieta personalizada</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Depoimentos -->
-  <section class="depoimentos">
-    <div class="container">
-      <h2>O que nossos usuários dizem</h2>
-      <div class="depoimentos-grid">
-        <div class="depoimento">
-          <img src="assets/pessoa1.png" alt="Usuário" />
-          <p>"Em 3 meses, perdi 8kg de forma saudável. A melhor parte? O Nutri Bot está disponível 24h para tirar minhas dúvidas!"</p>
-          <strong>Débora Gutierre, 25 anos</strong>
-        </div>
-        <div class="depoimento">
-          <img src="assets/pessoa2.png" alt="Usuário" />
-          <p>"Melhorei minha definição e reduzi gordura sem perder massa muscular. Pequenas mudanças, grandes resultados!"</p>
-          <strong>João Augusto, 33 anos</strong>
-        </div>
-        <div class="depoimento">
-          <img src="assets/pessoa3.png" alt="Usuário" />
-          <p>"O Nutri Bot me ajudou a calcular meus macros e encontrei refeições práticas para minha rotina."</p>
-          <strong>Eduardo Brandão, 27 anos</strong>
-        </div>
-        <div class="depoimento">
-          <img src="assets/pessoa4.png" alt="Usuário" />
-          <p>"Tenho pré-diabetes e o Nutri Bot me ajudou a evitar picos de glicose. Meu médico ficou impressionado!"</p>
-          <strong>Luiza Braga, 28 anos</strong>
+  <div class="gradient-wrapper">
+    <!-- Benefícios Section -->
+    <section id="beneficios" class="section beneficios">
+      <div class="container">
+        <h1>Serviços</h1>
+        <h2>Benefícios da Nutri Bot</h2>
+        <div class="cards-wrapper">
+          <div class="beneficio-card">
+            <ul>
+              <h3>Benefícios</h3>
+              <li>Seu Nutricionista Virtual 24h</li>
+              <li>Dietas 100% personalizadas</li>
+              <li>Baseado em ciência e nutrição</li>
+            </ul>
+            <a href="#" class="btn-primary redirecionar-formulario">Quero minha dieta personalizada</a>
+          </div>
+          <div class="beneficio-card">
+            <ul>
+              <h3>Benefícios</h3>
+              <li>Acompanhamento inteligente</li>
+              <li>Fácil de usar e acessível</li>
+              <li>Recomendações automatizadas</li>
+            </ul>
+            <a href="#" class="btn-primary redirecionar-formulario">Quero minha dieta personalizada</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <!-- Depoimentos -->
+    <section class="depoimentos">
+      <div class="container">
+        <h2>O que nossos usuários dizem</h2>
+        <div class="depoimentos-grid">
+          <div class="depoimento">
+            <img src="assets/pessoa1.png" alt="Usuário" />
+            <p>"Em 3 meses, perdi 8kg de forma saudável. A melhor parte? O Nutri Bot está disponível 24h para tirar minhas dúvidas!"</p>
+            <strong>Débora Gutierre, 25 anos</strong>
+          </div>
+          <div class="depoimento">
+            <img src="assets/pessoa2.png" alt="Usuário" />
+            <p>"Melhorei minha definição e reduzi gordura sem perder massa muscular. Pequenas mudanças, grandes resultados!"</p>
+            <strong>João Augusto, 33 anos</strong>
+          </div>
+          <div class="depoimento">
+            <img src="assets/pessoa3.png" alt="Usuário" />
+            <p>"O Nutri Bot me ajudou a calcular meus macros e encontrei refeições práticas para minha rotina."</p>
+            <strong>Eduardo Brandão, 27 anos</strong>
+          </div>
+          <div class="depoimento">
+            <img src="assets/pessoa4.png" alt="Usuário" />
+            <p>"Tenho pré-diabetes e o Nutri Bot me ajudou a evitar picos de glicose. Meu médico ficou impressionado!"</p>
+            <strong>Luiza Braga, 28 anos</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
   <!-- Rodapé -->
   <footer id="contato" class="footer">
     <div class="container">
@@ -160,6 +148,7 @@
       <p>CNPJ: 99.999.999/0001-99</p>
     </div>
   </footer>
-
+  <!-- Importa o script JavaScript -->
+  <script src="js.js"></script>
 </body>
 </html>
