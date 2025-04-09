@@ -376,7 +376,7 @@ img {
 
 /* Container que envolve Benefícios e Depoimentos com gradiente contínuo */
 .gradient-wrapper {
-  background: linear-gradient(to bottom, #f2f2f2, var(--verde-claro));
+  background: linear-gradient(to bottom, #f2f2f2, var(--verde-intermediario));
 }
 
 /* Remova o fundo próprio dessas seções */
