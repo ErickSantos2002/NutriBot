@@ -81,4 +81,21 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href = "formulario.html";
         });
         });
+
+        const text = "Alcance sua dieta ideal com nossa Nutri Bot";
+        const typingElement = document.getElementById("hero-typing");
+        let index = 0;
+
+        function typeEffect() {
+            if (index < text.length) {
+            typingElement.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeEffect, 70);
+            } else {
+            typingElement.classList.remove("blinking-cursor");
+            }
+        }
+
+        typingElement.classList.add("blinking-cursor");
+        typeEffect();
 });

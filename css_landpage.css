@@ -45,7 +45,7 @@ img {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 10px 20px; /* Diminuindo um pouco a altura para um design mais enxuto */
+  padding: 6px 20px; /* Diminuindo um pouco a altura para um design mais enxuto */
   transition: background 0.3s ease;
 }
 
@@ -69,7 +69,7 @@ img {
 /* Menu de navegação */
 .navbar nav ul {
   display: flex;
-  gap: 20px; /* Espaçamento reduzido entre os itens */
+  gap: 40px; /* Espaçamento reduzido entre os itens */
   margin: 0;
   padding: 0;
   list-style: none;
@@ -81,8 +81,7 @@ img {
   background-color: transparent;
   color: var(--verde-escuro);
   font-weight: bold;
-  padding: 8px 16px; /* Margem interna um pouco maior para melhor toque */
-  border-radius: 6px;
+  padding: 22px 20px; /* Margem interna um pouco maior para melhor toque */
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -95,11 +94,11 @@ img {
 /* Botão de CTA na Navbar */
 .navbar-btn {
   font-size: 0.9em;
-  padding: 10px 20px; /* Ajustado para se destacar com tamanho proporcional */
+  /*padding: 10px 20px; /* Ajustado para se destacar com tamanho proporcional */
   background-color: var(--verde-escuro);
   color: var(--branco);
   font-weight: 600;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
   transition: background-color 0.3s, transform 0.3s;
 }
@@ -371,7 +370,7 @@ img {
   position: relative;
   /* Remova o padding-bottom ou ajuste conforme necessário */
   padding-top: 50px;
-  padding-bottom: 150px; /* Aumente a área para o gradiente */
+  padding-bottom: 30px; /* Aumente a área para o gradiente */
 }
 
 /* Container que envolve Benefícios e Depoimentos com gradiente contínuo */
@@ -465,19 +464,19 @@ img {
   margin-top: 50px;
 }
 
-/* Linha */
 .linha-central {
-  width: 500px;           /* Define a largura da linha */
-  height: 1.5px;           /* Espessura da linha */
-  background-color: black;
-  margin: 40px auto;     /* Espaçamento acima e abaixo, e centraliza horizontalmente */
-  border-radius: 2px;    /* Opcional: cantos levemente arredondados */
+  width: 100%;
+  max-width: 600px; /* Mantém o limite de largura */
+  height: 1.5px;
+  margin: 40px auto;
+  border-radius: 2px;
+  background-image: linear-gradient(to right, transparent, black, transparent);
 }
 
 
 /* Depoimentos */
 .depoimentos {
-  padding: 100px 20px;
+  padding: 30px 20px;
   text-align: center;
 }
 
@@ -563,4 +562,15 @@ img {
 .visible.fade-up {
   transform: translateY(0);
   opacity: 1;
+}
+
+.blinking-cursor::after {
+  content: "|";
+  animation: blink 0.7s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
