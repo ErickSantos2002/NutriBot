@@ -574,3 +574,18 @@ img {
     opacity: 0;
   }
 }
+
+@media screen and (max-width: 768px) {
+  /* Esconde a navbar inteira em telas pequenas */
+  .navbar {
+    display: none;
+  }
+
+  /* Esconde a imagem central do app */
+  .app-image {
+    display: none !important;
+  }
+  .hero::before {
+    top: 0px; /* Ajuste esse valor para “empurrar” a imagem para baixo e mostrar mais do topo (experimente -30px, -50px, etc.) */
+  }
+}
